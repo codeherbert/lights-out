@@ -68,10 +68,17 @@ class Board extends Component {
 
   /* ========== Render game board OR winning message ========== */
 
-  render() {
-    if(this.state.hasWon) {
-      return <h1>You Won!!!</h1>;
-    }
+    render() {
+      if(this.state.hasWon) {
+        return (
+          <div className="Board-title">
+            <div class="winner">
+              <span className="neon-orange">YOU</span>
+              <span className="neon-blue">WIN!</span>
+            </div>
+          </div>
+        );
+      }
 
     // make table board
     let tblBoard = [];
